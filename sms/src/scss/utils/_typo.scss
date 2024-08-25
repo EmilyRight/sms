@@ -1,0 +1,20 @@
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: $font1;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  @include btn;
+}
+
+.btn_transparent {
+  @include btn_transparent;
+}
+
+p {
+  margin: 0;
+}

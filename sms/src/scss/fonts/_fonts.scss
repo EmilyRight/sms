@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "rooftop";
+  src: url("../fonts/T2_Rooftop-Regular.woff") format("woff"),
+    url("../fonts/T2_Rooftop-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "rooftop";
+  src: url("../fonts/T2-Rooftop-Medium.woff") format("woff"),
+    // ? bad file-name ???
+    url("../fonts/T2-Rooftop-Medium.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "halvar";
+  src: url("../fonts/T2HalvarBreit-ExtraBold.woff") format("woff"),
+    url("../fonts/T2HalvarBreit-ExtraBold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

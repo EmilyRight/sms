@@ -1,0 +1,79 @@
+.sticky-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $color-dark;
+  padding: 1.2rem 0;
+
+  @media (max-width: 600px) {
+    .region-selector {
+      flex-direction: column;
+      &__text {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+    .selected-region {
+      &__region-name {
+        margin-right: 0rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+#show-regions {
+  padding: 1.2rem;
+  @media (min-width: $mobile-small) {
+    width: 90%;
+    max-width: none;
+    min-height: 90%;
+    padding: 2.4rem;
+  }
+  .modal-box__header h3 {
+    margin: 0;
+  }
+
+  .modal-box__body {
+  }
+
+  .modal-box__actions {
+    padding: 1.2rem;
+  }
+
+  .modal-body {
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
+    @media (min-width: $mobile-small) {
+    }
+    &__region-list {
+      columns: 3;
+      ul,
+      li {
+        color: #fff;
+      }
+    }
+  }
+  .region-list {
+    &__all {
+    }
+
+    &__group {
+    }
+
+    &__letter {
+    }
+  }
+  .js-set-city {
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .btn {
+    @include btn;
+  }
+}

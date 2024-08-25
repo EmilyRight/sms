@@ -1,0 +1,44 @@
+{
+  "name": "landing-pages",
+  "browserslist": [
+    "last 2 versions",
+    "> 0.5%",
+    "not dead"
+  ],
+  "version": "1.0.0",
+  "license": "MIT License",
+  "description": "Tele2 landing pages",
+  "scripts": {
+    "p1": "node node_modules/parcel/lib/bin.js",
+    "p": "node node_modules/parcel/lib/bin.js",
+    "clean:output": "rimraf --glob dist",
+    "start": "npm run clean:output && npm run p -- sms/src/index.html",
+    "build": "npm run clean:output && npm run p -- build sms/src/index.html --public-url \".\" --no-source-maps",
+    "start:2": "npm run p1 -- careers.tele2.ru/src/index.html",
+    "build:2": "npm run clean:output && npm run p1 -- careers.tele2.ru/src/index.html --public-url \".\" --no-source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/tele2-digital/frontend/landing-pages.git"
+  },
+  "devDependencies": {
+    "@parcel/reporter-bundle-analyzer": "^2.12.0",
+    "@parcel/reporter-bundle-buddy": "^2.12.0",
+    "@parcel/transformer-image": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "babel-polyfill": "^6.26.0",
+    "browserslist": "^4.23.3",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "parcel": "^2.12.0",
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "inputmask": "^5.0.9",
+    "jquery": "^3.7.1",
+    "rimraf": "^6.0.1",
+    "ua-parser-js": "^1.0.38",
+    "wow.js": "^1.2.2"
+  }
+}

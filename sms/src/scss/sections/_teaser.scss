@@ -1,0 +1,112 @@
+.teaser {
+  background-color: #000;
+  padding-top: 0rem;
+  @media (min-width: $mobile-small) {
+    padding-top: 0;
+  }
+  &__content {
+    padding-top: 0.8rem;
+    padding-bottom: 1.8rem;
+    position: relative;
+    @media (min-width: $mobile-small) {
+      padding: 0;
+      margin-top: 2.4rem;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__buttons {
+    width: 84%;
+    flex-basis: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .teaser-content {
+    &__image {
+      max-width: 100%;
+      border-radius: 1.6rem;
+      overflow: hidden;
+      min-height: 25.5rem;
+      background-image: url("../img/page/teaser-mobile.jpg");
+      background-size: cover;
+      background-position-x: right;
+      @media (min-width: $mobile-small) {
+        border-radius: 2.4rem;
+        min-height: 36rem;
+        background-image: url("../img/page/teaser-desktop.jpg");
+      }
+      picture {
+        display: block;
+        max-width: 100%;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .teaser-body {
+    position: absolute;
+    padding: 1.2rem;
+    bottom: 2.4rem;
+    left: 50%;
+    background-color: black;
+    width: 97%;
+    border-radius: 1.2rem 1.2rem 1.2rem 0;
+    color: #fff;
+    transform: translateX(-50%);
+    @media (min-width: $mobile-small) {
+      padding: 2.4rem;
+      max-width: 46%;
+      left: 2.4rem;
+      top: 50%;
+      height: calc(100% - 2.4rem * 2);
+      transform: translateY(-50%);
+      border-radius: 2.4rem;
+    }
+    .container {
+      height: 100%;
+      padding: 0;
+      @media (min-width: $mobile-small) {
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+    &__text {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .teaser-text {
+    &__title {
+      @include teaser-title;
+      margin-bottom: 0.8rem;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      margin: 0;
+      @media (min-width: $mobile-small) {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+      }
+    }
+  }
+
+  .teaser-more {
+    display: none;
+    @media (min-width: $mobile-small) {
+      display: block;
+      width: 100%;
+      @include btn;
+      background-color: $color-t2-green;
+      font-family: $font2;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+  }
+}

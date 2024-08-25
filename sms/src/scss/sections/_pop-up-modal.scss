@@ -1,0 +1,212 @@
+//NEW MODAL BOX
+.modal-box-viewed {
+  overflow: hidden !important;
+} //body noscroll
+.popup-modal {
+  position: fixed;
+  z-index: 1000;
+  transition: opacity 0.5s;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  min-width: 100%;
+  backdrop-filter: blur(5px);
+  &.popup-modal-hidden {
+    pointer-events: none;
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  &:not(.popup-modal-hidden) {
+    &:before {
+      background: rgba(192, 189, 189, 0.5);
+      content: "";
+      position: fixed;
+      top: -5rem;
+      bottom: -5rem;
+      min-height: 100vh;
+      left: 0;
+      right: 0;
+      width: 100vw;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    display: flex;
+    overflow-y: visible;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.popup-modal__image {
+    .modal-box {
+      padding: 0.8rem;
+      max-width: 90%;
+      @media (min-width: $mobile-small) {
+        max-width: fit-content;
+      }
+    }
+    .modal-image {
+      max-width: fit-content;
+      img {
+        max-width: 100%;
+        display: block;
+        border-radius: 1.6rem;
+        @media (min-width: $mobile-small) {
+          max-width: fit-content;
+          max-height: 50rem;
+        }
+      }
+    }
+  }
+  .modal-box {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    height: auto;
+    max-width: 90%;
+    box-sizing: border-box;
+    padding: 1.8rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.6rem;
+    max-height: 80%;
+    overflow-y: scroll;
+    @media (min-width: $mobile-small) {
+      overflow: visible;
+    }
+    &__list {
+      font-family: $font1;
+      list-style: none;
+      margin-bottom: 2.2rem;
+      li {
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    &__header {
+      position: relative;
+      font-size: 1.9rem;
+      line-height: 2.6rem;
+      margin-bottom: 1.2rem;
+      font-family: $font2;
+      text-transform: uppercase;
+      color: #000;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      h4 {
+        margin-bottom: 2.2rem;
+      }
+      .close {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: 0.3s;
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+    &__body {
+      flex: 100% 1 1;
+      -ms-flex: 100% 1 auto;
+    }
+    &__actions {
+      padding: 0 1.8rem 3.6rem;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      -webkit-tap-highlight-color: transparent;
+      &.centered {
+        justify-content: center;
+      }
+    }
+
+    &.modal-box--dark {
+      background: $color-dark;
+      i,
+      h2,
+      h3,
+      h4,
+      h5,
+      a,
+      p {
+        color: #fff;
+      }
+      .btn {
+        border-color: #fff;
+      }
+
+      .btn {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+        &:hover {
+          color: $color-lightgray2;
+          border-color: $color-lightgray2;
+        }
+        &.disabled,
+        &:disabled {
+          color: $color-lightgray2;
+          background: transparent;
+          border-color: $color-lightgray2;
+          cursor: default !important;
+        }
+      }
+    }
+    &.modal-box-active {
+      z-index: 1;
+      display: flex;
+      //padding-bottom: 70px;transform: translateY(70px);
+    }
+
+    // .region-list {
+    //   display: flex;
+    //   &__all {
+    //   }
+
+    //   &__group {
+    //   }
+
+    //   &__letter {
+    //     color: #fff;
+    //   }
+    // }
+    // .js-set-city {
+    //   color: #fff;
+    // }
+
+    @media all and (min-width: 768px) {
+      max-width: 760px;
+      top: auto;
+      left: auto;
+      transform: none;
+      &:not(.modal-box--dark) {
+        border: 2px solid $color-lightgray2;
+        padding: 2rem;
+      }
+
+      &__header {
+        text-align: left;
+        h2,
+        h3 {
+          font-size: 3.8rem;
+        }
+      }
+      &__list {
+        max-width: 90%;
+      }
+      &__actions {
+        flex-direction: row;
+        display: flex;
+        .btn {
+          margin: 0 2rem 0 0;
+        }
+      }
+    }
+  }
+}
