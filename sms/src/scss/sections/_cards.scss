@@ -38,6 +38,7 @@
     img {
       display: block;
       width: 80%;
+      max-width: 3.2rem;
     }
     @media (min-width: $mobile) {
       margin-bottom: 2.4rem;

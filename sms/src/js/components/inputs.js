@@ -37,14 +37,14 @@ function showErrors(textHolder) {
   const inputValue = inputField.value;
   const errorBlock = textHolder.querySelector('.error-text');
   if (inputField.classList.contains('js-name')) {
-    if (inputValue.length < 2) {
+    if (inputValue.length > 0 && inputValue.length < 2) {
       textHolder.classList.add(errorText);
+      errorBlock.innerText = innError;
     } else {
       textHolder.classList.remove(errorText);
     }
   } else if (inputField.classList.contains('js-tel')) {
     const validatedPhone = validatePhone();
-    console.log(validatedPhone);
 
     if (validatedPhone.correctPhoneNumber === null) {
       textHolder.classList.add(errorText);
@@ -59,9 +59,11 @@ function showErrors(textHolder) {
     }
   } else if (inputField.classList.contains('js-inn')) {
     if (inputValue.length < 10) {
+      textHolder.classList.add(errorText);
       errorBlock.style.display = 'block';
       errorBlock.innerText = innError;
     } else {
+      textHolder.classList.remove(errorText);
       errorBlock.style.display = 'none';
     }
   }
