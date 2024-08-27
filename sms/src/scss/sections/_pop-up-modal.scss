@@ -40,7 +40,7 @@
   &.popup-modal__image {
     .modal-box {
       padding: 0.8rem;
-      max-width: 90%;
+      max-width: 94%;
       @media (min-width: $mobile-small) {
         max-width: fit-content;
       }
@@ -64,9 +64,9 @@
     justify-content: space-between;
     background: #ffffff;
     height: auto;
-    max-width: 90%;
+    max-width: 94%;
     box-sizing: border-box;
-    padding: 1.8rem;
+    padding: 1.2rem;
     position: relative;
     top: 50%;
     left: 50%;
@@ -74,8 +74,11 @@
     border-radius: 1.6rem;
     max-height: 80%;
     overflow-y: scroll;
+    border: none;
     @media (min-width: $mobile-small) {
       overflow: visible;
+      padding: 2.4rem;
+      border-radius: 3.2rem;
     }
     &__list {
       font-family: $font1;
@@ -88,15 +91,27 @@
 
     &__header {
       position: relative;
-      font-size: 1.9rem;
-      line-height: 2.6rem;
-      margin-bottom: 1.2rem;
       font-family: $font2;
       text-transform: uppercase;
       color: #000;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      h2,
+      h3 {
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        max-width: 90%;
+        margin-bottom: 1.8rem;
+      }
+      @media (min-width: $mobile-small) {
+        text-align: left;
+        h2,
+        h3 {
+          font-size: 2.8rem;
+          line-height: 2.4rem;
+        }
+      }
       h4 {
         margin-bottom: 2.2rem;
       }
@@ -116,7 +131,6 @@
       -ms-flex: 100% 1 auto;
     }
     &__actions {
-      padding: 0 1.8rem 3.6rem;
       text-align: center;
       flex-direction: column;
       align-items: center;
@@ -185,17 +199,8 @@
       top: auto;
       left: auto;
       transform: none;
-      &:not(.modal-box--dark) {
-        border: 2px solid $color-lightgray2;
-        padding: 2rem;
-      }
 
       &__header {
-        text-align: left;
-        h2,
-        h3 {
-          font-size: 3.8rem;
-        }
       }
       &__list {
         max-width: 90%;
