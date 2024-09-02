@@ -214,12 +214,15 @@ function openPopup() {
 function hideRegionQuestion() {
   const id = localStorage.getItem('siteId');
   const regionModalHeader = document.querySelector('.ask-for-region');
+  const regionFullName = document.querySelector('.selected-region');
   const defaultRegion = 'siteMSK';
   if (id) {
     regionModalHeader.style.display = 'none';
+    regionFullName.classList.remove('hidden');
   } else {
     localStorage.setItem('siteId', defaultRegion);
     regionModalHeader.style.display = 'none';
+    regionFullName.classList.remove('hidden');
   }
 }
 
