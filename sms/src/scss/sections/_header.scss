@@ -22,7 +22,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    padding-bottom: 0.8rem;
     gap: 0.8rem;
 
     @media (min-width: $mobile-small) {
@@ -48,6 +47,9 @@
     }
   }
   .selected-region {
+    &.hidden {
+      display: none;
+    }
     &__region-name {
       margin-right: 0.3rem;
       display: flex;
@@ -58,11 +60,7 @@
     }
 
     &__icon {
-      max-width: 2.4rem;
-      @media (min-width: $mobile-small) {
-        max-width: none;
-        width: 3rem;
-      }
+      width: 2.4rem;
     }
 
     &__name {

@@ -73,7 +73,7 @@
     transform: translate(-50%, -50%);
     border-radius: 1.6rem;
     max-height: 80%;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     border: none;
     @media (min-width: $mobile-small) {
       overflow: visible;
@@ -129,6 +129,13 @@
     &__body {
       flex: 100% 1 1;
       -ms-flex: 100% 1 auto;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
     }
     &__actions {
       text-align: center;
