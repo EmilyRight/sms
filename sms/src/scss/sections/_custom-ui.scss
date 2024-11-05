@@ -8,17 +8,20 @@
     background-color: $color-black;
     color: $color-white;
   }
+
   .modal-box__body {
     display: flex;
     flex-direction: column;
-    gap: 3.2rem;
-    margin-bottom: 3.2rem;
+    gap: 3vh;
+    margin-bottom: 3vh;
   }
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 0s 600000s, color 0s 600000s !important;
 }
+
 #error-modal-box {
   text-align: center;
   background: $color-dark;
@@ -58,7 +61,7 @@ input:-webkit-autofill:focus {
   }
 
   .text-field {
-    padding: 2.4rem 1.2rem;
+    padding: 3vh 1.2rem;
     border-radius: 1.6rem;
     border: none;
     background-color: #f2f2f2;

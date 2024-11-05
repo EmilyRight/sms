@@ -30,8 +30,6 @@ function getScrollbarWidth() {
   const documentWidth = document.documentElement.clientWidth;
   const windowsWidth = window.innerWidth;
   const scrollbarWidth = windowsWidth - documentWidth;
-  console.log(scrollbarWidth);
-  
   return scrollbarWidth;
 }
 

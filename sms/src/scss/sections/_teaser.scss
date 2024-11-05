@@ -4,6 +4,7 @@
   @media (min-width: $mobile-small) {
     padding-top: 0;
   }
+
   &__content {
     padding-top: 0.8rem;
     padding-bottom: 1.8rem;
@@ -28,18 +29,20 @@
       border-radius: 1.6rem;
       overflow: hidden;
       min-height: 25.5rem;
-      background-image: url("../img/page/teaser-mobile.png");
+      background-image: url("../img/page/teaser-mobile@2x.png");
       background-size: cover;
       background-position-x: right;
       @media (min-width: $mobile-small) {
         border-radius: 3.2rem;
         min-height: 36rem;
-        background-image: url("../img/page/teaser-desktop.png");
+        background-image: url("../img/page/teaser-desktop@2x.png");
       }
+
       picture {
         display: block;
         max-width: 100%;
       }
+
       img {
         display: block;
         width: 100%;
@@ -66,6 +69,7 @@
       transform: translateY(-50%);
       border-radius: 2.4rem;
     }
+
     .container {
       height: 100%;
       padding: 0;

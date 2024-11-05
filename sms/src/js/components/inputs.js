@@ -58,7 +58,7 @@ function showErrors(textHolder) {
       errorBlock.innerText = phoneError;
     }
   } else if (inputField.classList.contains('js-inn')) {
-    if (inputValue.length < 10) {
+    if (inputValue.length > 0 && inputValue.length < 10) {
       textHolder.classList.add(errorText);
       errorBlock.style.display = 'block';
       errorBlock.innerText = innError;

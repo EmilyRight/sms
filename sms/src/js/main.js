@@ -9,11 +9,12 @@ import {
 } from './components/inputs';
 import { generateId } from './components/utils';
 import GTMEvents from './components/gtmEvents';
+import swiper from './components/swiper';
 
 const GTM = new GTMEvents();
 
 /// /////// DocReady //////////
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   detectDevice(); // videoTeaser();
   new WOW().init();
   scrollTeaser();
@@ -24,6 +25,7 @@ window.addEventListener('load', () => {
   openPopup();
   chooseRegion();
   confirmRegion();
+  swiper.init();
   const { body } = document;
 
   // Показать поле ИНН
@@ -87,7 +89,7 @@ function submitCustomFormRequest() {
 
   const siteId = localStorage.getItem('siteId') || 'siteMSK';
   const url = `api/customForm/submission?siteId=${siteId}&formId=CrmMyTeamRequest`;
-  // const tariffFrontName = 'corp-ats';
+  // const tariffFrontName = 'sms-target';
 
   const requestBody = {
     MainContact: name,
@@ -96,13 +98,13 @@ function submitCustomFormRequest() {
     requestId: `${Date.now()}_${Math.random().toString().slice(2, 12)}`,
     region: siteId.slice(4).toLowerCase(),
     InnCompany: inn,
-    AdditionalInformation: 'Подключение услуги Корпоративная АТС',
-    options: [{ name: 'Корпоративная АТС' }],
+    AdditionalInformation: 'Подключение услуги SMS-Target',
+    options: [{ name: 'SMS-Target' }],
   };
   const requestGTM = {
     eventAction: 'send',
-    eventLabel: 'checkout_corp-ats-form_server_response',
-    requestId: `corp-ats_${Date.now()}${generateId(12)}`,
+    eventLabel: 'checkout_sms-target-form_server_response',
+    requestId: `sms-target_${Date.now()}${generateId(12)}`,
     eventCategory: 'Conversions',
     eventContent: requestBody.requestId, // eventContent: ,
     eventContext: 'successful',
