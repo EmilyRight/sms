@@ -2,6 +2,7 @@
 .modal-box-viewed {
   overflow: hidden !important;
 } //body noscroll
+
 .popup-modal {
   position: fixed;
   z-index: 1000;
@@ -16,6 +17,7 @@
     transform: translateX(120%);
     opacity: 0;
   }
+
   &:not(.popup-modal-hidden) {
     &:before {
       background: rgba(192, 189, 189, 0.5);
@@ -129,7 +131,6 @@
     &__body {
       flex: 100% 1 1;
       -ms-flex: 100% 1 auto;
-      overflow-y: scroll;
       -ms-overflow-style: none;
       scrollbar-width: none;
       &::-webkit-scrollbar {

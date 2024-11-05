@@ -1,6 +1,20 @@
-.gift {
+.section-slider {
   @media (min-width: $mobile-small) {
     padding-top: 2.4rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font2;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 1.2rem;
+    @media (min-width: $mobile-small) {
+      font-size: 2.8rem;
+      line-height: 2.2rem;
+      margin-bottom: 2.4rem;
+    }
   }
   .gift-content {
     display: flex;
@@ -18,11 +32,23 @@
       color: #fff;
       padding: 1.2rem;
       border-radius: 1.6rem;
+      min-height: 32.6rem;
+      display: flex;
+      flex-direction: column;
       @media (min-width: $mobile-small) {
         max-height: none;
+        min-height: 28rem;
         width: 50%;
         border-radius: 3.2rem;
         padding: 2.4rem;
+      }
+
+      .link,
+      p {
+        color: #fff;
+        display: block;
+        margin-bottom: 0.8rem;
+        @include text-main;
       }
     }
 
@@ -39,9 +65,8 @@
 
     &__title {
       @include section-title-constant;
-      margin-bottom: 3.2rem;
+      margin-bottom: 0.5rem;
       @media (min-width: $mobile-small) {
-        margin-bottom: 9.2rem;
       }
     }
 
@@ -50,6 +75,8 @@
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
+      margin-top: auto;
+      max-width: fit-content;
       @media (min-width: $mobile) {
         flex-direction: row;
         justify-content: space-between;
@@ -63,9 +90,11 @@
   }
   .btn {
     width: 100%;
+    margin-top: auto;
+    max-width: fit-content;
+    padding: 1.7rem 1.2rem;
     @media (min-width: $mobile) {
       padding: 1.2vw 1.8vw;
-      width: 50%;
     }
   }
   .gift-image {
@@ -81,6 +110,16 @@
       height: auto;
       width: 50%;
       border-radius: 3.2rem;
+    }
+    
+    &__pic-layer {
+      z-index: 10;
+      position: absolute;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
     }
 
     &::before {
@@ -99,30 +138,61 @@
         max-width: 34rem;
       }
     }
-
-    &__pic-layer {
-      width: 90%;
-      max-width: 34rem;
-      position: relative;
-      z-index: 10;
-      overflow: hidden;
+  }
+  .gift-content_first {
+    .gift-image__pic-layer {
       @media (min-width: $mobile-small) {
-        max-width: 40rem;
+        max-width: 79%;
+        bottom: 2rem;
+        left: 7rem;
       }
-    }
-    picture {
-      min-width: 100%;
-      display: block;
-      position: absolute;
-      bottom: -2rem;
-      @media (min-width: $mobile-small) {
-        bottom: -15%;
-      }
-    }
-    img {
-      display: block;
-      height: auto;
-      width: 100%;
     }
   }
+
+  .gift-content_second {
+    .gift-image__pic-layer {
+      position: absolute;
+      bottom: -1.5rem;
+      left: 1rem;
+      max-width: 88%;
+
+      @media (min-width: $mobile-small) {
+        max-width: 68%;
+        bottom: -1rem;
+        left: 8rem;
+      }
+    }
+  }
+
+  .gift-content_third {
+    .gift-image__pic-layer {
+      max-width: 84%;
+      position: absolute;
+      bottom: -3rem;
+      left: 3rem;
+
+      @media (min-width: $mobile-small) {
+        max-width: 62%;
+        bottom: -2rem;
+        left: 13rem;
+      }
+    }
+  }
+
+  // picture {
+  //   min-width: 100%;
+  //   display: block;
+  //   position: absolute;
+  //   bottom: -2rem;
+  //   height: 100%;
+  //   @media (min-width: $mobile-small) {
+  //     bottom: -15%;
+  //   }
+  // }
+
+  // img {
+  //   display: block;
+  //   height: auto;
+  //   width: 100%;
+  // }
 }
