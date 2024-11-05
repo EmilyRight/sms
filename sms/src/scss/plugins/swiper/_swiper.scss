@@ -91,10 +91,17 @@
   border-radius: 0.8rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   img {
     border: none;
     display: block;
     max-width: 1rem;
+  }
+
+  svg {
+    display: block;
+    max-height: 45%;
+    align-self: center;
   }
 
   &.swiper-button-disabled {
@@ -107,11 +114,11 @@
 .swiper-button-prev {
   left: 10px;
   right: auto;
+  transform: rotate(180deg);
 }
 .swiper-button-next {
   right: 10px;
   left: auto;
-  transform: rotate(180deg);
 }
 .swiper-button-lock {
   display: none;
