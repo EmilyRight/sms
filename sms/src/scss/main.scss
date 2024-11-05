@@ -50,6 +50,7 @@ body {
 }
 .page {
   transition: 0.2s;
+  background-color: #000000;
 }
 .wow {
   opacity: 0;
@@ -88,6 +89,11 @@ body {
 
 .white-bg {
   background-color: #fff;
+  border-radius: 1.8rem;
+  overflow: hidden;
+  @media (min-width: $mobile-small) {
+    border-radius: 3.6rem;
+  }
 }
 
 .black-bg {
@@ -96,8 +102,9 @@ body {
 
 .gray-bg {
   background-color: #f2f3f5;
+  padding-top: 5rem;
+  margin-top: -5rem;
 }
-
 
 .text_blue {
   color: #3fcbff;

@@ -4,8 +4,9 @@ const swiper = new Swiper('.swiper', {
   autoplay: {
     delay: 5000,
   },
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 12,
+  slidesOffsetAfter: 0,
   breakpoints: {
 
     600: {

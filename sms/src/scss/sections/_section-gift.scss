@@ -37,7 +37,7 @@
       flex-direction: column;
       @media (min-width: $mobile-small) {
         max-height: none;
-        min-height: 28rem;
+        min-height: 32rem;
         width: 50%;
         border-radius: 3.2rem;
         padding: 2.4rem;
@@ -111,7 +111,7 @@
       width: 50%;
       border-radius: 3.2rem;
     }
-    
+
     &__pic-layer {
       z-index: 10;
       position: absolute;
